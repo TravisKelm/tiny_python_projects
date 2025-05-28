@@ -1,2 +1,9 @@
+#!/usr/bin/env python
 # Purpose: Say hello
-print('Hello, World!')
+
+import argparse
+
+parser = argparse.ArgumentParser(description='This program says hello')
+parser.add_argument('-n', '--name', metavar='name', default='World', help='Whom to greet')
+args = parser.parse_args()
+print('Hello, ' + args.name + '!')
