@@ -3,7 +3,11 @@
 
 import argparse
 
-parser = argparse.ArgumentParser(description='This program says hello')
-parser.add_argument('-n', '--name', metavar='name', default='World', help='Whom to greet')
-args = parser.parse_args()
-print('Hello, ' + args.name + '!')
+def main():
+    parser = argparse.ArgumentParser(description='This program says hello')
+    parser.add_argument('-n', '--name', metavar='name', default='World', help='Whom to greet')
+    args = parser.parse_args()
+    print('Hello, ' + args.name + '!')
+    
+if __name__ == '__main__':
+    main()
